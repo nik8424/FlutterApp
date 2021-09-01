@@ -11,4 +11,8 @@ class MyTheme {
         iconTheme: const IconThemeData(color: Colors.black),
         textTheme: Theme.of(context).textTheme,
       ));
+
+  static ThemeData darkTheme(BuildContext context) => ThemeData(
+        brightness: Brightness.dark,
+      );
 }
