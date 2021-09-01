@@ -22,7 +22,7 @@ class _LoginPageState extends State<LoginPage> {
         changeButton = true;
       });
 
-      await Future.delayed(Duration(seconds: 1));
+      await Future.delayed(Duration(milliseconds: 800));
       await Navigator.pushNamed(context, MyRoutes.homeRoute);
       setState(() {
         changeButton = false;
@@ -102,7 +102,7 @@ class _LoginPageState extends State<LoginPage> {
                         child: InkWell(
                           onTap: () => moveToHome(context),
                           child: AnimatedContainer(
-                            duration: Duration(milliseconds: 1000),
+                            duration: Duration(milliseconds: 800),
                             width: changeButton ? 50 : 150,
                             height: 50,
                             alignment: Alignment.center,
