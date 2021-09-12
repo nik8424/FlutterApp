@@ -14,7 +14,7 @@ class HomeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(backgroundColor: Colors.transparent),
       backgroundColor: MyTheme.creamColor,
       bottomNavigationBar: Container(
         color: Colors.white,
@@ -50,19 +50,26 @@ class HomeDetailPage extends StatelessWidget {
               height: 30.0,
               arcType: VxArcType.CONVEY,
               edge: VxEdge.TOP,
-              child: Container(
-                color: Colors.white,
-                width: context.screenWidth,
-                child: Column(
-                  children: [
-                    catalog.name.text.xl4
-                        .color(MyTheme.darkBluishColor)
-                        .bold
-                        .make(),
-                    catalog.desc.text.xl.make(),
-                    10.heightBox,
-                  ],
-                ).py64(),
+              child: SingleChildScrollView(
+                child: Container(
+                  color: Colors.white,
+                  width: context.screenWidth,
+                  child: Column(
+                    children: [
+                      catalog.name.text.xl4
+                          .color(MyTheme.darkBluishColor)
+                          .bold
+                          .make(),
+                      catalog.desc.text.caption(context).xl.make(),
+                      10.heightBox,
+                      "Labore diam nonumy duo diam et. Sit invidunt invidunt lorem accusam nonumy lorem rebum, diam sanctus dolor amet accusam invidunt est clita tempor, eos lorem ea ipsum kasd diam nonumy diam ea, dolores duo invidunt erat sadipscing sit gubergren amet no justo. Dolor takimata labore diam eirmod nonumy no dolor.."
+                          .text
+                          .caption(context)
+                          .make()
+                          .p12(),
+                    ],
+                  ).py64(),
+                ),
               ),
             ))
           ],
