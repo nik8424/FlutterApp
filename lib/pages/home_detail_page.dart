@@ -32,8 +32,8 @@ class HomeDetailPage extends StatelessWidget {
                   shape: MaterialStateProperty.all(
                     const StadiumBorder(),
                   )),
-              child: "Buy".text.make(),
-            ).wh(100, 50)
+              child: "Add To Cart".text.make(),
+            ).wh(120, 50)
           ],
         ).p32(),
       ),
@@ -66,7 +66,7 @@ class HomeDetailPage extends StatelessWidget {
                           .text
                           .caption(context)
                           .make()
-                          .p12(),
+                          .p16(),
                     ],
                   ).py64(),
                 ),
