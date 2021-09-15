@@ -1,5 +1,4 @@
 // ignore_for_file: deprecated_member_use
-
 import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -51,7 +50,7 @@ class _HomePageState extends State<HomePage> {
         ),
         body: SafeArea(
           child: Container(
-            padding: Vx.m32,
+            padding: Vx.m20,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

@@ -68,7 +68,7 @@ class HomeDetailPage extends StatelessWidget {
                           .make()
                           .p16(),
                     ],
-                  ).py64(),
+                  ).p64(),
                 ),
               ),
             ))
