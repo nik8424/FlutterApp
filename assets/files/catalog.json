@@ -2,67 +2,67 @@
   "products": [
     {
       "id": 1,
-      "name": "iPhone 12 Pro",
-      "desc": "Apple iPhone 12th generation",
-      "price": 999,
+      "name": "Fourier",
+      "desc": "Fourier Transform",
+      "price": 99,
       "color": "#33505a",
-      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-blue-hero?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1604021661000"
+      "image": "https://cdn-icons-png.flaticon.com/512/3299/3299960.png"
     },
     {
       "id": 2,
-      "name": "Pixel 5",
-      "desc": "Google Pixel phone 5th generation",
-      "price": 699,
+      "name": "Basics",
+      "desc": "Pre-requisites",
+      "price": 69,
       "color": "#00ac51",
-      "image": "https://www.telstra.com.au/content/dam/tcom/lego/2020/plans-devices/mobiles/google-pixel-5/shared-google-pixel-5-black-05-900x1200.png"
+      "image": "https://cdn-icons-png.flaticon.com/512/3678/3678975.png"
     },
     {
       "id": 3,
-      "name": "M1 Macbook Air",
-      "desc": "Apple Macbook air with apple silicon",
-      "price": 1099,
+      "name": "Laplace",
+      "desc": "Laplace Transform",
+      "price": 10,
       "color": "#e0bfae",
-      "image": "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP825/macbookair.png"
+      "image": "https://cdn-icons-png.flaticon.com/512/5846/5846298.png"
     },
     {
       "id": 4,
-      "name": "Playstation 5",
-      "desc": "Sony Playstation 5th generation",
-      "price": 500,
+      "name": "Vectors",
+      "desc": "Vectors",
+      "price": 50,
       "color": "#544ee4",
-      "image": "https://i1.wp.com/freepngimages.com/wp-content/uploads/2020/07/Playstation-5-games-console-transparent-background-png-image.png?fit=1000%2C1000"
+      "image": "https://cdn-icons-png.flaticon.com/512/5848/5848105.png"
     },
     {
       "id": 5,
-      "name": "Airpods Pro",
-      "desc": "Apple Aipods Pro 1st generation",
-      "price": 200,
+      "name": "Matrices",
+      "desc": "Matrices",
+      "price": 20,
       "color": "#e3e4e9",
-      "image": "https://crdms.images.consumerreports.org/c_lfill,w_598/prod/products/cr/models/400116-wireless-portable-headphones-apple-airpods-pro-10009323.png"
+      "image": "https://cdn-icons-png.flaticon.com/512/43/43492.png"
     },
     {
       "id": 6,
-      "name": "iPad Pro",
-      "desc": "Apple iPad Pro 2020 edition",
-      "price": 799,
+      "name": "Integration",
+      "desc": "Integration",
+      "price": 79,
       "color": "#f73984",
-      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-pro-12-select-wifi-silver-202003_FMT_WHH?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1583551131102"
+      "image": "https://cdn-icons-png.flaticon.com/512/43/43262.png"
     },
     {
       "id": 7,
-      "name": "Galaxy S21 Ultra",
-      "desc": "Samsung Galaxy S21 Ultra 2021 edition",
-      "price": 1299,
+      "name": "Differentiation",
+      "desc": "Derivative",
+      "price": 12,
       "color": "#1c1c1c",
-      "image": "https://lh3.googleusercontent.com/qRQPjHrhRVIs-xnfNSyiPXOH2vH97ylMacgbTKebqJtRfNH3LlYo8pN-5igsLDWUH62tGl5zNpTsl5xd8SprzGmXoCEmWFOi2-2cQVGS-r3PaRXHt62DmJHq-jrYX0UQvWZ9BA=s800-c"
+      "image": "https://cdn-icons-png.flaticon.com/512/43/43694.png"
     },
     {
       "id": 8,
-      "name": "Galaxy S21",
-      "desc": "Samsung Galaxy S21 2021 edition",
-      "price": 899,
+      "name": "Partial Fraction",
+      "desc": "Partial Fraction Expansion",
+      "price": 89,
       "color": "#7c95eb",
-      "image": "https://images.samsung.com/is/image/samsung/p6pim/za/galaxy-s21/gallery/za-clear-cover-galaxy-s21-5g-ef-qg991ttegww-363168624?$720_576_PNG$"
+      "image": "https://cdn-icons-png.flaticon.com/512/1985/1985727.png"
     }
   ]
 }

@@ -105,7 +105,7 @@ class _AddToCartState extends State<_AddToCart> {
           shape: MaterialStateProperty.all(
             const StadiumBorder(),
           )),
-      child: isadded ? const Icon(Icons.done) : "Add To Cart".text.make(),
+      child: isadded ? const Icon(Icons.done) : "Watch Later".text.make(),
     );
   }
 }

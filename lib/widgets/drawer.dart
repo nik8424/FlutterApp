@@ -12,7 +12,7 @@ class MyDrawer extends StatelessWidget {
         "https://cdn.pixabay.com/photo/2016/11/18/23/38/child-1837375_960_720.png";
     return Drawer(
       child: Container(
-        color: Colors.deepPurple,
+        color: Colors.grey,
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
@@ -23,7 +23,7 @@ class MyDrawer extends StatelessWidget {
               child: UserAccountsDrawerHeader(
                 margin: EdgeInsets.zero,
                 decoration: BoxDecoration(
-                  color: Colors.deepPurple,
+                  color: Colors.grey,
                 ),
                 accountName: Text("Nikhil"),
                 accountEmail: Text("nik@gmail.com"),
