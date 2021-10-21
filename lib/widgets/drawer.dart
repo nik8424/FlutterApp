@@ -1,7 +1,8 @@
-// ignore_for_file: prefer_const_constructors, duplicate_ignore, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, duplicate_ignore, prefer_const_literals_to_create_immutables, deprecated_member_use
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/widgets/themes.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({Key? key}) : super(key: key);
@@ -12,7 +13,7 @@ class MyDrawer extends StatelessWidget {
         "https://cdn.pixabay.com/photo/2016/11/18/23/38/child-1837375_960_720.png";
     return Drawer(
       child: Container(
-        color: Colors.grey,
+        color: MyTheme.darkBluishColor,
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
@@ -23,7 +24,7 @@ class MyDrawer extends StatelessWidget {
               child: UserAccountsDrawerHeader(
                 margin: EdgeInsets.zero,
                 decoration: BoxDecoration(
-                  color: Colors.grey,
+                  color: MyTheme.darkBluishColor,
                 ),
                 accountName: Text("Nikhil"),
                 accountEmail: Text("nik@gmail.com"),
@@ -32,7 +33,11 @@ class MyDrawer extends StatelessWidget {
                 ),
               ),
             ),
+            Divider(
+              color: MyTheme.creamColor,
+            ),
             ListTile(
+              onTap: () {},
               leading: Icon(
                 CupertinoIcons.home,
                 color: Colors.white,
