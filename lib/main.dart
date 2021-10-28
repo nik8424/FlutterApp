@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/cart_page.dart';
 import 'package:flutter_application_1/pages/home_page.dart';
 import 'package:flutter_application_1/pages/login_page.dart';
+import 'package:flutter_application_1/pages/video_info.dart';
 import 'package:flutter_application_1/utils/routes.dart';
 import 'package:flutter_application_1/widgets/themes.dart';
+import 'package:flutter_windowmanager/flutter_windowmanager.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,6 +13,13 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
+  secureScreen() async {
+    await FlutterWindowManager.addFlags(FlutterWindowManager.FLAG_SECURE);
+  }
+
+  void initState() {
+    secureScreen();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +34,7 @@ class MyApp extends StatelessWidget {
         MyRoutes.homeRoute: (context) => const HomePage(),
         MyRoutes.loginRoute: (context) => const LoginPage(),
         MyRoutes.cartRoute: (context) => const CartPage(),
+        MyRoutes.videoRoute: (context) => const VideoInfo(),
       },
     );
   }
