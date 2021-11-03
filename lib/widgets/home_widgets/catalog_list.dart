@@ -1,4 +1,4 @@
-// ignore_for_file: deprecated_member_use
+// ignore_for_file: deprecated_member_use, unused_import
 
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/models/cart.dart';
@@ -22,7 +22,7 @@ class CatalogList extends StatelessWidget {
           onTap: () => Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (context) => const VideoInfo(
+                  builder: (context) => const VideoPlayerScreen(
                       //catalog: catalog,
                       ))),
           child: CatalogItem(catalog: catalog),

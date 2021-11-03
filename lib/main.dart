@@ -28,13 +28,13 @@ class MyApp extends StatelessWidget {
       theme: MyTheme.lightTheme(context),
       darkTheme: MyTheme.darkTheme(context),
       debugShowCheckedModeBanner: false,
-      initialRoute: MyRoutes.homeRoute,
+      initialRoute: MyRoutes.loginRoute,
       routes: {
         "/": (context) => const LoginPage(),
         MyRoutes.homeRoute: (context) => const HomePage(),
         MyRoutes.loginRoute: (context) => const LoginPage(),
         MyRoutes.cartRoute: (context) => const CartPage(),
-        MyRoutes.videoRoute: (context) => const VideoInfo(),
+        MyRoutes.videoRoute: (context) => const VideoPlayerScreen(),
       },
     );
   }
