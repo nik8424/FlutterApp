@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/cart_page.dart';
 import 'package:flutter_application_1/pages/home_page.dart';
 import 'package:flutter_application_1/pages/login_page.dart';
+import 'package:flutter_application_1/pages/profile_me.dart';
 import 'package:flutter_application_1/pages/video_info.dart';
 import 'package:flutter_application_1/utils/routes.dart';
 import 'package:flutter_application_1/widgets/themes.dart';
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
         MyRoutes.loginRoute: (context) => const LoginPage(),
         MyRoutes.cartRoute: (context) => const CartPage(),
         MyRoutes.videoRoute: (context) => const VideoPlayerScreen(),
+        MyRoutes.profileRoute: (context) => const Myprofile(),
       },
     );
   }

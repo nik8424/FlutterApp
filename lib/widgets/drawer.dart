@@ -1,8 +1,12 @@
-// ignore_for_file: prefer_const_constructors, duplicate_ignore, prefer_const_literals_to_create_immutables, deprecated_member_use
+// ignore_for_file: prefer_const_constructors, duplicate_ignore, prefer_const_literals_to_create_immutables, deprecated_member_use, unused_import
+
+import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/utils/routes.dart';
 import 'package:flutter_application_1/widgets/themes.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({Key? key}) : super(key: key);
@@ -26,7 +30,7 @@ class MyDrawer extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: MyTheme.darkBluishColor,
                 ),
-                accountName: Text("Nikhil"),
+                accountName: Text("Nikhil Bhandare"),
                 accountEmail: Text("nik@gmail.com"),
                 currentAccountPicture: CircleAvatar(
                   backgroundImage: NetworkImage(imageUrl),
@@ -37,7 +41,9 @@ class MyDrawer extends StatelessWidget {
               color: MyTheme.creamColor,
             ),
             ListTile(
-              onTap: () {},
+              onTap: () {
+                Navigator.pop(context, MyRoutes.homeRoute);
+              },
               leading: Icon(
                 CupertinoIcons.home,
                 color: Colors.white,
@@ -51,6 +57,9 @@ class MyDrawer extends StatelessWidget {
               ),
             ),
             ListTile(
+              onTap: () {
+                Navigator.popAndPushNamed(context, MyRoutes.profileRoute);
+              },
               leading: Icon(
                 CupertinoIcons.profile_circled,
                 color: Colors.white,
@@ -64,6 +73,10 @@ class MyDrawer extends StatelessWidget {
               ),
             ),
             ListTile(
+              onTap: () {
+                // go to google.com
+                launch("https://www.google.com");
+              },
               leading: Icon(
                 CupertinoIcons.mail,
                 color: Colors.white,
