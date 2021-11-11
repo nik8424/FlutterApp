@@ -14,6 +14,7 @@ class HomeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       appBar: AppBar(backgroundColor: Colors.transparent),
       backgroundColor: context.canvasColor,
       bottomNavigationBar: Container(
@@ -45,7 +46,7 @@ class HomeDetailPage extends StatelessWidget {
               catalog: catalog,
             ).wh(120, 50)
           ],
-        ).p32(),
+        ).pOnly(bottom: 40, left: 25, right: 25, top: 10),
       ),
       body: SafeArea(
         bottom: false,
