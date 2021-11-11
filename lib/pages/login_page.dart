@@ -24,7 +24,7 @@ class _LoginPageState extends State<LoginPage> {
       });
 
       await Future.delayed(Duration(milliseconds: 800));
-      await Navigator.pushNamed(context, MyRoutes.homeRoute);
+      await Navigator.pushNamed(context, MyRoutes.mainhomeRoute);
       setState(() {
         changeButton = false;
       });
@@ -69,6 +69,10 @@ class _LoginPageState extends State<LoginPage> {
                         labelText: "User name",
                       ),
                       validator: (value) {
+                        if (value != "nikhil") {
+                          return "Not a member";
+                        }
+
                         if (value!.isEmpty) {
                           return "User name cannot be empty";
                         }
@@ -86,6 +90,9 @@ class _LoginPageState extends State<LoginPage> {
                         labelText: "Password",
                       ),
                       validator: (value) {
+                        if (value != "nik@1010") {
+                          return "Not a member";
+                        }
                         if (value!.isEmpty) {
                           return "Password cannot be empty";
                         } else if (value.length < 6) {

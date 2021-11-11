@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/cart_page.dart';
+import 'package:flutter_application_1/pages/home_main.dart';
 import 'package:flutter_application_1/pages/home_page.dart';
 import 'package:flutter_application_1/pages/login_page.dart';
 import 'package:flutter_application_1/pages/profile_me.dart';
 import 'package:flutter_application_1/pages/video_info.dart';
 import 'package:flutter_application_1/utils/routes.dart';
+
 import 'package:flutter_application_1/widgets/themes.dart';
 import 'package:flutter_windowmanager/flutter_windowmanager.dart';
 
@@ -25,11 +27,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      themeMode: ThemeMode.system,
+      themeMode: ThemeMode.light,
       theme: MyTheme.lightTheme(context),
       darkTheme: MyTheme.darkTheme(context),
       debugShowCheckedModeBanner: false,
-      initialRoute: MyRoutes.loginRoute,
+      initialRoute: MyRoutes.homeRoute,
       routes: {
         "/": (context) => const LoginPage(),
         MyRoutes.homeRoute: (context) => const HomePage(),
@@ -37,6 +39,7 @@ class MyApp extends StatelessWidget {
         MyRoutes.cartRoute: (context) => const CartPage(),
         MyRoutes.videoRoute: (context) => const VideoPlayerScreen(),
         MyRoutes.profileRoute: (context) => const Myprofile(),
+        MyRoutes.mainhomeRoute: (context) => const MainHome(),
       },
     );
   }

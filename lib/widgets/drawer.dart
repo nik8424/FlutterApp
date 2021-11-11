@@ -13,8 +13,7 @@ class MyDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const imageUrl =
-        "https://cdn.pixabay.com/photo/2016/11/18/23/38/child-1837375_960_720.png";
+    const imageUrl = "assets/images/user.png";
     return Drawer(
       child: Container(
         color: MyTheme.darkBluishColor,
@@ -33,7 +32,7 @@ class MyDrawer extends StatelessWidget {
                 accountName: Text("Nikhil Bhandare"),
                 accountEmail: Text("nik@gmail.com"),
                 currentAccountPicture: CircleAvatar(
-                  backgroundImage: NetworkImage(imageUrl),
+                  backgroundImage: AssetImage(imageUrl),
                 ),
               ),
             ),
@@ -41,9 +40,7 @@ class MyDrawer extends StatelessWidget {
               color: MyTheme.creamColor,
             ),
             ListTile(
-              onTap: () {
-                Navigator.pop(context, MyRoutes.homeRoute);
-              },
+              onTap: () => Navigator.pushNamed(context, MyRoutes.mainhomeRoute),
               leading: Icon(
                 CupertinoIcons.home,
                 color: Colors.white,

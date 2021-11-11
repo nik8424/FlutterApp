@@ -23,7 +23,7 @@ class Myprofile extends StatelessWidget {
     return Scaffold(
       backgroundColor: context.canvasColor,
       appBar: AppBar(
-        iconTheme: const IconThemeData(color: Colors.black),
+        iconTheme: const IconThemeData(color: Vx.purple900),
       ),
       body: SafeArea(
         child: SizedBox(
@@ -43,8 +43,7 @@ class Myprofile extends StatelessWidget {
               SizedBox(
                 height: 200,
                 width: 200,
-                child: Image.network(
-                    "https://cdn.pixabay.com/photo/2016/11/18/23/38/child-1837375_960_720.png"),
+                child: Image.asset("assets/images/user.png"),
               ).p20(),
               const SizedBox(
                 height: 20,

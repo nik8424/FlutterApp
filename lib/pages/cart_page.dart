@@ -37,18 +37,17 @@ class _CartTotal extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _cart = CartModel();
     return SizedBox(
       height: 200,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          "\$${_cart.totalprice}"
-              .text
-              .xl5
-              .color(context.theme.accentColor)
-              .make(),
-          30.widthBox,
+          // "\$${_cart.totalprice}"
+          //     .text
+          //     .xl5
+          //     .color(context.theme.accentColor)
+          //     .make(),
+          // 30.widthBox,
           ElevatedButton(
             onPressed: () {
               ScaffoldMessenger.of(context).showSnackBar(
@@ -58,7 +57,7 @@ class _CartTotal extends StatelessWidget {
                 backgroundColor:
                     MaterialStateProperty.all(context.theme.buttonColor)),
             child: "Watch Now".text.white.make(),
-          ).w32(context)
+          ).w32(context).px2()
         ],
       ),
     );

@@ -26,10 +26,11 @@ class MyTheme {
         buttonColor: lightBluishColor,
         accentColor: Colors.white,
         appBarTheme: AppBarTheme(
-            color: Colors.black,
-            elevation: 0.0,
-            iconTheme: const IconThemeData(color: Colors.white),
-            textTheme: Theme.of(context).textTheme,),
+          color: Colors.black,
+          elevation: 0.0,
+          iconTheme: const IconThemeData(color: Colors.white),
+          textTheme: Theme.of(context).textTheme,
+        ),
       );
 
 //colors
