@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/video_info.dart';
+import 'package:flutter_application_1/widgets/home_widgets/add_to_watch.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:flutter_application_1/models/catalog.dart';
 
@@ -19,19 +21,28 @@ class HomeDetailPage extends StatelessWidget {
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           buttonPadding: EdgeInsets.zero,
-          children: [
-            "\$${catalog.price}".text.bold.xl4.red800.make(),
+          children: <Widget>[
             ElevatedButton(
-              onPressed: () {},
+              child: const Icon(Icons.play_arrow, size: 40),
               style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(
-                    // ignore: deprecated_member_use
-                    context.theme.buttonColor,
-                  ),
-                  shape: MaterialStateProperty.all(
-                    const StadiumBorder(),
-                  )),
-              child: "Watch Later".text.make(),
+                fixedSize: MaterialStateProperty.all(const Size(120, 50)),
+                backgroundColor: MaterialStateProperty.all(
+                  // ignore: deprecated_member_use
+                  context.theme.buttonColor,
+                ),
+                shape: MaterialStateProperty.all(
+                  const StadiumBorder(),
+                ),
+              ),
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const VideoPlayerScreen(),
+                ),
+              ),
+            ),
+            AddToCart(
+              catalog: catalog,
             ).wh(120, 50)
           ],
         ).p32(),

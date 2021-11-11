@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors, deprecated_member_use
-
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/utils/routes.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -23,7 +21,7 @@ class _LoginPageState extends State<LoginPage> {
         changeButton = true;
       });
 
-      await Future.delayed(Duration(milliseconds: 800));
+      await Future.delayed(const Duration(milliseconds: 800));
       await Navigator.pushNamed(context, MyRoutes.mainhomeRoute);
       setState(() {
         changeButton = false;
@@ -45,17 +43,17 @@ class _LoginPageState extends State<LoginPage> {
                 "assets/images/login.png",
                 fit: BoxFit.cover,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20.0,
               ),
               Text(
                 "Welcome $name",
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20.0,
               ),
               Padding(
@@ -64,7 +62,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
                   children: [
                     TextFormField(
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         hintText: "Enter username",
                         labelText: "User name",
                       ),
@@ -85,7 +83,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     TextFormField(
                       obscureText: true,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         hintText: "Enter Password",
                         labelText: "Password",
                       ),
@@ -101,26 +99,27 @@ class _LoginPageState extends State<LoginPage> {
                         return null;
                       },
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 40.0,
                     ),
                     Material(
+                      // ignore: deprecated_member_use
                       color: context.theme.buttonColor,
                       borderRadius:
                           BorderRadius.circular(changeButton ? 50 : 8),
                       child: InkWell(
                         onTap: () => moveToHome(context),
                         child: AnimatedContainer(
-                          duration: Duration(milliseconds: 800),
+                          duration: const Duration(milliseconds: 800),
                           width: changeButton ? 50 : 150,
                           height: 50,
                           alignment: Alignment.center,
                           child: changeButton
-                              ? Icon(
+                              ? const Icon(
                                   Icons.done,
                                   color: Colors.white,
                                 )
-                              : Text(
+                              : const Text(
                                   "Login",
                                   style: TextStyle(
                                     color: Colors.white,

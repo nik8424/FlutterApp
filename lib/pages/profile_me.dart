@@ -1,19 +1,6 @@
-// ignore_for_file: deprecated_member_use, unused_import
-
-import 'dart:convert';
-
 import "package:flutter/material.dart";
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_windowmanager/flutter_windowmanager.dart';
 import 'package:velocity_x/velocity_x.dart';
-
-import 'package:flutter_application_1/models/catalog.dart';
-import 'package:flutter_application_1/utils/routes.dart';
-import 'package:flutter_application_1/widgets/drawer.dart';
-import 'package:flutter_application_1/widgets/home_widgets/catalog_header.dart';
-import 'package:flutter_application_1/widgets/home_widgets/catalog_list.dart';
-import 'package:flutter_application_1/widgets/themes.dart';
 
 class Myprofile extends StatelessWidget {
   const Myprofile({Key? key}) : super(key: key);

@@ -1,4 +1,3 @@
-// ignore_for_file: deprecated_member_use, unnecessary_import
 import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -45,17 +44,10 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
-            bottomLeft: Radius.circular(30),
-            bottomRight: Radius.circular(30),
-          ),
-        ),
-      ),
       backgroundColor: context.canvasColor,
       floatingActionButton: FloatingActionButton(
         onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
+        // ignore: deprecated_member_use
         backgroundColor: context.theme.buttonColor,
         child: const Icon(CupertinoIcons.play, color: Colors.white),
       ),
