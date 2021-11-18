@@ -54,7 +54,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
               const SizedBox(
-                height: 20.0,
+                height: 10.0,
               ),
               Padding(
                 padding:

@@ -6,6 +6,7 @@ import 'package:flutter_application_1/pages/home_page.dart';
 import 'package:flutter_application_1/pages/login_page.dart';
 import 'package:flutter_application_1/pages/profile_me.dart';
 import 'package:flutter_application_1/pages/video_info.dart';
+import 'package:flutter_application_1/screens/home_screen.dart';
 import 'package:flutter_application_1/utils/routes.dart';
 import 'package:flutter_application_1/widgets/themes.dart';
 import 'package:flutter_windowmanager/flutter_windowmanager.dart';
@@ -28,11 +29,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.system,
       theme: MyTheme.lightTheme(context),
       darkTheme: MyTheme.darkTheme(context),
       debugShowCheckedModeBanner: false,
-      initialRoute: MyRoutes.homeRoute,
+      initialRoute: MyRoutes.loginRoute,
       routes: {
         "/": (context) => const LoginPage(),
         MyRoutes.homeRoute: (context) => const HomePage(),
@@ -41,6 +42,7 @@ class MyApp extends StatelessWidget {
         MyRoutes.videoRoute: (context) => const VideoPlayerScreen(),
         MyRoutes.profileRoute: (context) => const Myprofile(),
         MyRoutes.mainhomeRoute: (context) => const MainHome(),
+        MyRoutes.youtubeRoute: (context) => const HomeScreen(),
       },
     );
   }

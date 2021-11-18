@@ -6,4 +6,5 @@ class MyRoutes {
   static String videoRoute = "/video";
   static String profileRoute = "/profile";
   static String mainhomeRoute = "/mainhome";
+  static String youtubeRoute = "/homescreen";
 }

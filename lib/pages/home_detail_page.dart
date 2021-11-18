@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/pages/video_info.dart';
+import 'package:flutter_application_1/screens/home_screen.dart';
 import 'package:flutter_application_1/widgets/home_widgets/add_to_watch.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:flutter_application_1/models/catalog.dart';
@@ -18,27 +18,31 @@ class HomeDetailPage extends StatelessWidget {
       appBar: AppBar(backgroundColor: Colors.transparent),
       backgroundColor: context.canvasColor,
       bottomNavigationBar: Container(
+        // ignore: deprecated_member_use
         color: context.cardColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           buttonPadding: EdgeInsets.zero,
           children: <Widget>[
-            ElevatedButton(
-              child: const Icon(Icons.play_arrow, size: 40),
-              style: ButtonStyle(
-                fixedSize: MaterialStateProperty.all(const Size(120, 50)),
-                backgroundColor: MaterialStateProperty.all(
-                  // ignore: deprecated_member_use
-                  context.theme.buttonColor,
+            Hero(
+              tag: const HomeScreen(),
+              child: ElevatedButton(
+                child: const Icon(Icons.play_arrow, size: 40),
+                style: ButtonStyle(
+                  fixedSize: MaterialStateProperty.all(const Size(120, 50)),
+                  backgroundColor: MaterialStateProperty.all(
+                    // ignore: deprecated_member_use
+                    context.theme.buttonColor,
+                  ),
+                  shape: MaterialStateProperty.all(
+                    const StadiumBorder(),
+                  ),
                 ),
-                shape: MaterialStateProperty.all(
-                  const StadiumBorder(),
-                ),
-              ),
-              onPressed: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const VideoPlayerScreen(),
+                onPressed: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const HomeScreen(),
+                  ),
                 ),
               ),
             ),

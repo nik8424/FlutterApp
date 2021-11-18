@@ -50,3 +50,8 @@ class Myprofile extends StatelessWidget {
     );
   }
 }
+
+
+
+//user profile with flutter 
+//https://www.youtube.com/watch?v=_XjQ_X_Xz-Q

@@ -25,7 +25,11 @@ class MainHome extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  SvgPicture.asset("assets/icons/menu.svg"),
+                  SvgPicture.asset("assets/icons/star.svg").continuousRectangle(
+                    height: 30,
+                    width: 30,
+                    backgroundColor: context.canvasColor,
+                  ),
                   GestureDetector(
                       onTap: () =>
                           Navigator.pushNamed(context, MyRoutes.profileRoute),
@@ -69,25 +73,16 @@ class MainHome extends StatelessWidget {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const <Widget>[
-                  Text(
-                    "Fields",
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Color(0xFF0D1333),
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Text(
-                    "See All",
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Color(0xFF0D1333),
-                    ),
-                  ),
+                children: <Widget>[
+                  "Fields".text.color(context.accentColor).semiBold.xl2.make(),
                 ],
               ),
-              const SizedBox(height: 30),
+              const Hero(
+                tag: "HomePage",
+                child: SizedBox(
+                  height: 30,
+                ),
+              ),
               Expanded(
                 child: StaggeredGridView.countBuilder(
                   padding: const EdgeInsets.all(0),
@@ -105,7 +100,11 @@ class MainHome extends StatelessWidget {
                           padding: const EdgeInsets.all(20),
                           height: index.isEven ? 200 : 240,
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(16),
+                            border: Border.all(
+                              color: context.accentColor,
+                              width: 0.5,
+                            ),
+                            borderRadius: BorderRadius.circular(20),
                             color: const Color(0xFF6E8AFA),
                             image: DecorationImage(
                               image: AssetImage(categories[index].image),
