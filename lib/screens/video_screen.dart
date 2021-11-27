@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class VideoScreen extends StatefulWidget {
   final String id;
@@ -24,25 +25,27 @@ class _VideoScreenState extends State<VideoScreen> {
         mute: false,
         autoPlay: true,
         loop: false,
+        forceHD: true,
+        enableCaption: false,
       ),
     );
   }
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: Colors.black,
-        // appBar: AppBar(),
-        body: Center(
-          child: YoutubePlayer(
-            controller: _controller,
-            aspectRatio: 16 / 9,
-            showVideoProgressIndicator: true,
-            onReady: () {},
-          ),
+    return Scaffold(
+      backgroundColor: Colors.black,
+      body: Center(
+        child: YoutubePlayer(
+          width: context.screenWidth,
+          controller: _controller,
+          aspectRatio: 16 / 9,
+          showVideoProgressIndicator: false,
+          onReady: () {},
         ),
       ),
     );
   }
 }
+
+

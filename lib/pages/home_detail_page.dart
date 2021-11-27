@@ -24,25 +24,22 @@ class HomeDetailPage extends StatelessWidget {
           alignment: MainAxisAlignment.spaceBetween,
           buttonPadding: EdgeInsets.zero,
           children: <Widget>[
-            Hero(
-              tag: const HomeScreen(),
-              child: ElevatedButton(
-                child: const Icon(Icons.play_arrow, size: 40),
-                style: ButtonStyle(
-                  fixedSize: MaterialStateProperty.all(const Size(120, 50)),
-                  backgroundColor: MaterialStateProperty.all(
-                    // ignore: deprecated_member_use
-                    context.theme.buttonColor,
-                  ),
-                  shape: MaterialStateProperty.all(
-                    const StadiumBorder(),
-                  ),
+            ElevatedButton(
+              child: const Icon(Icons.play_arrow, size: 40),
+              style: ButtonStyle(
+                fixedSize: MaterialStateProperty.all(const Size(120, 50)),
+                backgroundColor: MaterialStateProperty.all(
+                  // ignore: deprecated_member_use
+                  context.theme.buttonColor,
                 ),
-                onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const HomeScreen(),
-                  ),
+                shape: MaterialStateProperty.all(
+                  const StadiumBorder(),
+                ),
+              ),
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const HomeScreen(),
                 ),
               ),
             ),

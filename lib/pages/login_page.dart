@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/utils/routes.dart';
+import 'package:flutter_windowmanager/flutter_windowmanager.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
+  secureScreen() async {
+    await FlutterWindowManager.addFlags(FlutterWindowManager.FLAG_SECURE);
+  }
+
+  void initState() {
+    secureScreen();
+  }
 
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -67,10 +75,6 @@ class _LoginPageState extends State<LoginPage> {
                         labelText: "User name",
                       ),
                       validator: (value) {
-                        if (value != "nikhil") {
-                          return "Not a member";
-                        }
-
                         if (value!.isEmpty) {
                           return "User name cannot be empty";
                         }
@@ -88,9 +92,6 @@ class _LoginPageState extends State<LoginPage> {
                         labelText: "Password",
                       ),
                       validator: (value) {
-                        if (value != "nik@1010") {
-                          return "Not a member";
-                        }
                         if (value!.isEmpty) {
                           return "Password cannot be empty";
                         } else if (value.length < 6) {

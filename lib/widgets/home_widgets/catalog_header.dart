@@ -11,7 +11,7 @@ class CatalogHeader extends StatelessWidget {
       children: [
         // ignore: deprecated_member_use
         "ECS EDU App".text.xl5.bold.color(context.theme.accentColor).make(),
-        "Trending Videos".text.xl2.make(),
+        "Chapters".text.xl2.make(),
       ],
     );
   }

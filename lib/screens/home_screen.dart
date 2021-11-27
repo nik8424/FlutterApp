@@ -24,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Future<void> _initChannel() async {
     Channel channel = await APIService.instance
-        .fetchChannel(required, channelId: 'UC8aTjhUIr9XfwTv1xmp5EMQ');
+        .fetchChannel(required, channelId: 'UCEmig2PwKGUmaQ9xzFWJ_xA');
     setState(() {
       _channel = channel;
     });
@@ -91,7 +91,6 @@ class _HomeScreenState extends State<HomeScreen> {
         context,
         MaterialPageRoute(
           builder: (_) => VideoScreen(id: video.id),
-          
         ),
       ),
       child: Container(
@@ -179,7 +178,7 @@ class _HomeScreenState extends State<HomeScreen> {
           : Center(
               child: const CircularProgressIndicator(
                 color: Colors.deepPurple,
-              ).centered().expand(),
+              ).centered(),
             ),
     );
   }
