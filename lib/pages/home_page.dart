@@ -28,7 +28,6 @@ class _HomePageState extends State<HomePage> {
     super.initState();
     loadData();
     secureScreen();
-    setState(() {});
   }
 
   loadData() async {
@@ -37,9 +36,12 @@ class _HomePageState extends State<HomePage> {
         await rootBundle.loadString("assets/files/catalog.json");
     final decodedData = jsonDecode(catalogJson);
     var productData = decodedData["products"];
+
     CatalogModel.items =
         List.from(productData).map<Item>((item) => Item.fromMap(item)).toList();
-    setState(() {});
+    setState(() {
+      CatalogModel.items = CatalogModel.items;
+    });
   }
 
   @override

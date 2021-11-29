@@ -17,7 +17,7 @@ class MainHome extends StatelessWidget {
       drawer: const MyDrawer(),
       backgroundColor: context.canvasColor,
       body: Padding(
-        padding: const EdgeInsets.only(top: 50, left: 10, right: 10),
+        padding: const EdgeInsets.only(top: 60, left: 10, right: 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
