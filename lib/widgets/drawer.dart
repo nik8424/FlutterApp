@@ -4,6 +4,7 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/notes_page.dart';
 import 'package:flutter_application_1/utils/routes.dart';
 import 'package:flutter_application_1/widgets/themes.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -86,6 +87,20 @@ class MyDrawer extends StatelessWidget {
                 ),
               ),
             ),
+            ListTile(
+              onTap: () => Navigator.pushNamed(context, MyRoutes.pdfRoute),
+              leading: Icon(
+                CupertinoIcons.home,
+                color: Colors.white,
+              ),
+              title: Text(
+                "Notes",
+                textScaleFactor: 1.2,
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+            )
           ],
         ),
       ),

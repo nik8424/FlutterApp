@@ -98,8 +98,8 @@ class _HomeScreenState extends State<HomeScreen> {
         padding: const EdgeInsets.all(10.0),
         height: 140.0,
         decoration: const BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(20.0)),
           color: Colors.white,
+          borderRadius: BorderRadius.all(Radius.circular(20.0)),
           boxShadow: [
             BoxShadow(
               color: Colors.black12,

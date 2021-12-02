@@ -47,5 +47,3 @@ class _VideoScreenState extends State<VideoScreen> {
     );
   }
 }
-
-

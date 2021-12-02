@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/utils/routes.dart';
 import 'package:flutter_windowmanager/flutter_windowmanager.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'package:form_field_validator/form_field_validator.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -19,6 +20,7 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   String name = "";
+
   bool changeButton = false;
 
   final _formKey = GlobalKey<FormState>();
@@ -70,7 +72,10 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
                   children: [
                     TextFormField(
+                      autovalidateMode: AutovalidateMode.onUserInteraction,
                       decoration: const InputDecoration(
+                        suffixIcon: Icon(Icons.person),
+                        border: OutlineInputBorder(),
                         hintText: "Enter username",
                         labelText: "User name",
                       ),
@@ -84,22 +89,45 @@ class _LoginPageState extends State<LoginPage> {
                         name = value;
                         setState(() {});
                       },
-                    ),
+                    ).p8(),
                     TextFormField(
+                        autovalidateMode: AutovalidateMode.onUserInteraction,
+                        decoration: const InputDecoration(
+                          suffixIcon: Icon(Icons.email_outlined),
+                          border: OutlineInputBorder(),
+                          hintText: "Enter email",
+                          labelText: "User email",
+                        ),
+                        validator: MultiValidator(
+                          [
+                            RequiredValidator(
+                                errorText: "Email cannot be empty"),
+                            EmailValidator(errorText: "Invalid email"),
+                          ],
+                        )
+                        // onChanged: (value) {
+                        //   name = value;
+                        //   setState(() {});
+                        // },
+                        ).p8(),
+                    TextFormField(
+                      autovalidateMode: AutovalidateMode.onUserInteraction,
                       obscureText: true,
                       decoration: const InputDecoration(
+                        suffixIcon: Icon(Icons.password_outlined),
+                        border: OutlineInputBorder(),
                         hintText: "Enter Password",
                         labelText: "Password",
                       ),
-                      validator: (value) {
-                        if (value!.isEmpty) {
-                          return "Password cannot be empty";
-                        } else if (value.length < 6) {
-                          return "Password lenght should be atleast 6";
-                        }
-                        return null;
-                      },
-                    ),
+                      validator: MultiValidator(
+                        [
+                          RequiredValidator(
+                              errorText: "Password cannot be empty"),
+                          MinLengthValidator(6,
+                              errorText: "Password too short"),
+                        ],
+                      ),
+                    ).p8(),
                     const SizedBox(
                       height: 40.0,
                     ),

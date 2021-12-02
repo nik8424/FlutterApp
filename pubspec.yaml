@@ -48,6 +48,17 @@ dependencies:
   shared_preferences: ^2.0.8
   http: ^0.13.4
   fullscreen: ^1.0.3
+  form_field_validator: ^1.1.0
+
+  flutter_pdfview: ^1.2.1
+
+  #firebase
+  firebase_core: ^1.10.0
+  firebase_auth: ^3.2.0
+  firebase_analytics: ^8.3.4
+  firebase_database: ^8.1.0
+  cloud_firestore: ^3.1.0
+  firebase_storage: ^10.1.0
 
 dev_dependencies:
   flutter_test:

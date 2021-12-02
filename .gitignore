@@ -48,3 +48,7 @@ app.*.map.json
 # Exceptions to above rules
 
 lib/utilities/keys.dart
+
+#firebase
+android/app/google-services.json
+ios/Runner/GoogleService-Info.plist

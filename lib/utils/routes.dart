@@ -7,4 +7,5 @@ class MyRoutes {
   static String profileRoute = "/profile";
   static String mainhomeRoute = "/mainhome";
   static String youtubeRoute = "/homescreen";
+  static String pdfRoute = "/pdfscreen";
 }

@@ -40,7 +40,7 @@ class MainHome extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 40),
-            "Hello, Nikhil".text.color(context.accentColor).xl5.semiBold.make(),
+            "Hello,Nikhil".text.color(context.accentColor).xl5.semiBold.make(),
             "Find a course you want to learn"
                 .text
                 .color(context.accentColor)
