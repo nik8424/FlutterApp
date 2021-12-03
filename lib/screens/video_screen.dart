@@ -42,6 +42,7 @@ class _VideoScreenState extends State<VideoScreen> {
           aspectRatio: 16 / 9,
           showVideoProgressIndicator: false,
           onReady: () {},
+          // bottomActions: [],
         ),
       ),
     );

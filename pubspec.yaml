@@ -49,7 +49,6 @@ dependencies:
   http: ^0.13.4
   fullscreen: ^1.0.3
   form_field_validator: ^1.1.0
-
   flutter_pdfview: ^1.2.1
 
   #firebase
