@@ -33,11 +33,11 @@ class CatalogList extends StatelessWidget {
 }
 
 class CatalogItem extends StatelessWidget {
-  final Item catalog;
-  const CatalogItem({
-    Key? key,
-    required this.catalog,
-  }) : super(key: key);
+   final Item catalog;
+   const CatalogItem({
+   Key? key,
+   required this.catalog,
+   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

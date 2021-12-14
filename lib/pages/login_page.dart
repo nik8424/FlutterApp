@@ -19,11 +19,10 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
   String name = "";
-
   bool changeButton = false;
-
-  final _formKey = GlobalKey<FormState>();
 
   moveToHome(BuildContext context) async {
     if (_formKey.currentState!.validate()) {

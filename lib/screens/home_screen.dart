@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/models/channel_model.dart';
 import 'package:flutter_application_1/models/video_model.dart';
@@ -16,6 +17,8 @@ class _HomeScreenState extends State<HomeScreen> {
   Channel? _channel;
   bool _isLoading = false;
 
+  var cha = "UC8CLThsPAiYDWo4emAoaWbQ";
+
   @override
   void initState() {
     super.initState();
@@ -23,8 +26,8 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Future<void> _initChannel() async {
-    Channel channel = await APIService.instance
-        .fetchChannel(required, channelId: 'UCQYMhOMi_Cdj1CEAU-fv80A');
+    Channel channel =
+        await APIService.instance.fetchChannel(required, channelId: cha);
     setState(() {
       _channel = channel;
     });

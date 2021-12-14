@@ -20,6 +20,8 @@ class Item {
   final num price;
   final String color;
   final String image;
+  final String details;
+  final String chanid;
 
   Item({
     required this.id,
@@ -28,6 +30,8 @@ class Item {
     required this.price,
     required this.color,
     required this.image,
+    required this.details,
+    required this.chanid,
   });
 
   Item copyWith({
@@ -37,6 +41,8 @@ class Item {
     num? price,
     String? color,
     String? image,
+    String? details,
+    String? chanid,
   }) {
     return Item(
       id: id ?? this.id,
@@ -45,6 +51,8 @@ class Item {
       price: price ?? this.price,
       color: color ?? this.color,
       image: image ?? this.image,
+      details: details ?? this.details,
+      chanid: chanid ?? this.chanid,
     );
   }
 
@@ -56,18 +64,21 @@ class Item {
       'price': price,
       'color': color,
       'image': image,
+      'details': details,
+      'chanid': chanid,
     };
   }
 
   factory Item.fromMap(Map<String, dynamic> map) {
     return Item(
-      id: map['id'],
-      name: map['name'],
-      desc: map['desc'],
-      price: map['price'],
-      color: map['color'],
-      image: map['image'],
-    );
+        id: map['id'],
+        name: map['name'],
+        desc: map['desc'],
+        price: map['price'],
+        color: map['color'],
+        image: map['image'],
+        details: map['details'],
+        chanid: map['chanid']);
   }
 
   String toJson() => json.encode(toMap());
@@ -76,7 +87,7 @@ class Item {
 
   @override
   String toString() {
-    return 'Item(id: $id, name: $name, desc: $desc, price: $price, color: $color, image: $image)';
+    return 'Item(id: $id, name: $name, desc: $desc, price: $price, color: $color, image: $image, details: $details, chanid: $chanid)';
   }
 
   @override
@@ -89,6 +100,8 @@ class Item {
         other.desc == desc &&
         other.price == price &&
         other.color == color &&
+        other.details == details &&
+        other.chanid == chanid &&
         other.image == image;
   }
 
@@ -99,6 +112,8 @@ class Item {
         desc.hashCode ^
         price.hashCode ^
         color.hashCode ^
+        details.hashCode ^
+        chanid.hashCode ^
         image.hashCode;
   }
 }

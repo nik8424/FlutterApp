@@ -66,6 +66,7 @@ class HomeDetailPage extends StatelessWidget {
                 child: Container(
                   color: context.cardColor,
                   width: context.screenWidth,
+                  height: context.screenHeight,
                   child: Column(
                     children: [
                       catalog.name.text.xl4
@@ -74,11 +75,7 @@ class HomeDetailPage extends StatelessWidget {
                           .make(),
                       catalog.desc.text.caption(context).xl.make(),
                       10.heightBox,
-                      "Labore diam nonumy duo diam et. Sit invidunt invidunt lorem accusam nonumy lorem rebum, diam sanctus dolor amet accusam invidunt est clita tempor, eos lorem ea ipsum kasd diam nonumy diam ea, dolores duo invidunt erat sadipscing sit gubergren amet no justo. Dolor takimata labore diam eirmod nonumy no dolor.."
-                          .text
-                          .caption(context)
-                          .make()
-                          .p16(),
+                      catalog.details.text.caption(context).make().p16(),
                     ],
                   ).p64(),
                 ),
